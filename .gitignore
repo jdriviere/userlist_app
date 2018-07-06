@@ -1,0 +1,5 @@
+# FOLDERS
+__pycache__/
+.idea/
+.vscode/
+venv/
