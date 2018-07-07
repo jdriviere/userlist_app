@@ -28,6 +28,12 @@
                 <td>{{ user.first_name }}</td>
                 <td>{{ user.last_name }}</td>
                 <td>{{ user.username }}</td>
+                <td>
+                    <div class="buttons pull--right">
+                        <a href="#" class="button button--info"><i class="fa fa-pencil-square-o"></i></a>
+                        <a href="#" class="button button--danger"><i class="fa fa-trash-o"></i></a>
+                    </div>
+                </td>
             </tr>
             {% endfor %}
         </tbody>
