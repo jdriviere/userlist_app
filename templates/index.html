@@ -6,15 +6,15 @@
 
 {% block body %}
 <div class="wrapper">
-    <h1>Welcome to UserList</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sit rerum possimus quos quam impedit dignissimos ducimus corporis ratione temporibus.</p>
+    <h1 class="make-text-title">Welcome to UserList</h1>
+    <h3 class="make-text-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
 
     <a href="{{ url_for('register') }}" class="button">
-        <span class="fa fa-plus"></span>
-        &nbsp;Add User
+        <i class="fa fa-plus"></i>
+        <span class="make-margin-10-left">Add User</span>
     </a>
 
-    <table class="table table--default">
+    <table class="table make-default">
         <thead>
             <tr>
                 <td>First Name</td>
@@ -29,9 +29,9 @@
                 <td>{{ user.last_name }}</td>
                 <td>{{ user.username }}</td>
                 <td>
-                    <div class="buttons pull--right">
-                        <a href="#" class="button button--info"><i class="fa fa-pencil-square-o"></i></a>
-                        <a href="#" class="button button--danger"><i class="fa fa-trash-o"></i></a>
+                    <div class="buttons make-float-right">
+                        <a href="#" class="button make-info"><i class="fa fa-pencil-square-o"></i></a>
+                        <a href="#" class="button make-danger"><i class="fa fa-trash-o"></i></a>
                     </div>
                 </td>
             </tr>

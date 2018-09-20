@@ -8,40 +8,41 @@
 <div class="wrapper">
     <div class="card">
         <div class="card__header">
-            <h3 class="card__header__title">Register:</h3>
+            <p class="card__title">Register:</p>
+            <p class="card__subtitle">Fill out all the spaces to register a new User.</p>
         </div>
 
         <div class="card__body">
             {% for category, message in get_flashed_messages(with_categories=true) %}
-            <p class="alert alert--{{ category }}">{{ message }}</p>
+            <p class="alert make-{{ category }}">{{ message }}</p>
             {% endfor %}
 
             <form method="POST" action="{{ url_for('register') }}">
                 {{ form.csrf_token }}
 
-                <div class="grid grid--gutter">
-                    <div class="column column--half">
+                <div class="grid make-gutters">
+                    <div class="column make-half">
                         {{ form.first_name(size=50, class_='input', placeholder='First Name') }}
                     </div>
-                    <div class="column column--half">
+                    <div class="column make-half">
                         {{ form.last_name(size=50, class_='input', placeholder='Last Name') }}
                     </div>
                 </div>
-                <div class="grid grid--gutter">
-                    <div class="column column--half">
+                <div class="grid make-gutters">
+                    <div class="column make-half">
                         {{ form.username(size=50, class_='input', placeholder='Username') }}
                     </div>
-                    <div class="column column--half">
+                    <div class="column make-half">
                         {{ form.password(size=50, class_='input', placeholder='Password') }}
                     </div>
                 </div>
 
                 <div class="buttons">
                     <button type="submit" class="button">Register</button>
-                    <button type="reset" class="button button--danger button--outline">Reset</button>
-                    <button type="button" class="button button--info" onclick="location.href='{{ url_for('home') }}'">
-                        <span class="fa fa-arrow-left"></span>
-                        &nbsp;Go Back
+                    <button type="reset" class="button make-danger make-outline">Reset</button>
+                    <button type="button" class="button make-info" onclick="location.href='{{ url_for('home') }}'">
+                        <i class="fa fa-arrow-left"></i>
+                        <span class="make-margin-10-left">Go Back</span>
                     </button>
                 </div>
             </form>
