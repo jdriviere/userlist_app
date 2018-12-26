@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, request, url_for, flash
 from flask_pymongo import PyMongo
 
-from forms import UserForm
+from models.forms import UserForm
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret_key'

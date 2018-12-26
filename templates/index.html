@@ -9,17 +9,20 @@
     <h1 class="make-text-title">Welcome to UserList</h1>
     <h3 class="make-text-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
 
-    <a href="{{ url_for('register') }}" class="button">
-        <i class="fa fa-plus"></i>
-        <span class="make-margin-10-left">Add User</span>
-    </a>
+    <div class="buttons make-margin-20-vertical">
+        <a href="{{ url_for('register') }}" class="button make-success make-small">
+            <i class="fa fa-plus"></i>
+            <span class="make-margin-10-left">Add User</span>
+        </a>
+    </div>
 
-    <table class="table make-default">
+    <table class="table">
         <thead>
             <tr>
-                <td>First Name</td>
-                <td>Last Name</td>
-                <td>Username</td>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -30,8 +33,8 @@
                 <td>{{ user.username }}</td>
                 <td>
                     <div class="buttons make-float-right">
-                        <a href="#" class="button make-info"><i class="fa fa-pencil-square-o"></i></a>
-                        <a href="#" class="button make-danger"><i class="fa fa-trash-o"></i></a>
+                        <a href="#" class="button make-warning make-small"><i class="fa fa-pencil-square-o"></i></a>
+                        <a href="#" class="button make-danger make-small"><i class="fa fa-trash-o"></i></a>
                     </div>
                 </td>
             </tr>

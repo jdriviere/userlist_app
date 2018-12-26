@@ -6,7 +6,7 @@
 
 {% block body %}
 <div class="wrapper">
-    <div class="card">
+    <div class="card make-margin-60-vertical">
         <div class="card__header">
             <p class="card__title">Register:</p>
             <p class="card__subtitle">Fill out all the spaces to register a new User.</p>
@@ -20,19 +20,19 @@
             <form method="POST" action="{{ url_for('register') }}">
                 {{ form.csrf_token }}
 
-                <div class="grid make-gutters">
-                    <div class="column make-half">
+                <div class="columns">
+                    <div class="column">
                         {{ form.first_name(size=50, class_='input', placeholder='First Name') }}
                     </div>
-                    <div class="column make-half">
+                    <div class="column">
                         {{ form.last_name(size=50, class_='input', placeholder='Last Name') }}
                     </div>
                 </div>
-                <div class="grid make-gutters">
-                    <div class="column make-half">
+                <div class="columns">
+                    <div class="column">
                         {{ form.username(size=50, class_='input', placeholder='Username') }}
                     </div>
-                    <div class="column make-half">
+                    <div class="column">
                         {{ form.password(size=50, class_='input', placeholder='Password') }}
                     </div>
                 </div>
@@ -40,7 +40,10 @@
                 <div class="buttons">
                     <button type="submit" class="button">Register</button>
                     <button type="reset" class="button make-danger make-outline">Reset</button>
-                    <button type="button" class="button make-info" onclick="location.href='{{ url_for('home') }}'">
+                    <button
+                        type="button"
+                        class="button make-info"
+                        onclick="location.href='{{ url_for('home') }}'">
                         <i class="fa fa-arrow-left"></i>
                         <span class="make-margin-10-left">Go Back</span>
                     </button>
